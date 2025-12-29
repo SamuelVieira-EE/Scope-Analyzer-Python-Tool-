@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 def load_csv(path: str):
     """
-    Expects a CSV with two columns: time (seconds), voltage (volts)
+    Takes a CSV with two columns: time (seconds), voltage (volts)
     Header row is OK (example: time,voltage)
     """
     data = np.genfromtxt(path, delimiter=",", skip_header=1)
@@ -111,3 +111,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
