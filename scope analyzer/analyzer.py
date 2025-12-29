@@ -31,7 +31,6 @@ def find_main_frequency(time, voltage):
     
     return frequencies, amplitudes, main_frequency
 
-# Main program
 print("Loading data...")
 time, voltage = load_data('sample_data.csv')
 
@@ -61,5 +60,6 @@ plt.grid(True)
 
 plt.tight_layout()
 plt.show()
+
 
 
