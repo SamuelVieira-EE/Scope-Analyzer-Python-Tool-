@@ -55,11 +55,12 @@ plt.plot(frequencies, amplitudes)
 plt.xlabel('Frequency (Hz)')
 plt.ylabel('Strength')
 plt.title('Frequency Spectrum')
-plt.xlim(0, 5000)  # Only show up to 5000 Hz
+plt.xlim(0, 5000)  # Only show up 5000 Hz
 plt.grid(True)
 
 plt.tight_layout()
 plt.show()
+
 
 
 
