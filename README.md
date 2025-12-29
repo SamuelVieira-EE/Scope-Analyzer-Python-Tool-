@@ -1,2 +1,2 @@
-# Python-Engineering-Tools
-eng
+# Scope Analyzer (Python FFT Tool)
+
