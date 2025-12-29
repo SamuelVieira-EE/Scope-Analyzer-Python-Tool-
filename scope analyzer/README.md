@@ -1,9 +1,12 @@
 # Scope CSV Analyzer (Waveform + FFT)
 
-A beginner-friendly Python project that reads an oscilloscope CSV export and:
+reads an oscilloscope CSV and:
 - plots the waveform (time vs voltage)
-- computes and plots the FFT spectrum
-- prints the dominant frequency
+- then it will plot the FFT spectrum ->(takes a signal in time from oscilloscope and converts into frequency Amplitude vs Frequency)
+- Find the biggest FFT peak
+- prints result
+
+waveform -> FFT -> frequency peaks -> dominant frequency
 
 ## Input CSV format
 
@@ -22,3 +25,4 @@ time,voltage
 
 ```bash
 pip install -r requirements.txt
+
