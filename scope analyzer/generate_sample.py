@@ -1,34 +1,29 @@
 import numpy as np
 
-# Settings for our fake signal
-sample_rate = 100000        # How many measurements per second
-duration = 0.02             # How long to record (seconds)
-frequency = 1000            # Frequency of our sine wave (Hz)
-noise_level = 0.05          # How much random noise to add
+#set of data or sample
+sample_rate = 100000        # number of measurements per second
+duration = 0.02             #length of time to record (seconds)
+frequency = 1000            #frequency (Hz)
+noise_level = 0.05          #noise
 
-# Create time points
-# Example: if duration=1 second and sample_rate=100, we get 100 time points
+#create time points so if duration=1 second and sample_rate=100 there is 100 time points
 time_step = 1 / sample_rate
 time = np.arange(0, duration, time_step)
 
-# Create a sine wave
-# Formula: sin(2 * π * frequency * time)
-sine_wave = np.sin(2 * np.pi * frequency * time)
 
-# Add some random noise to make it realistic
+sine_wave = np.sin(2 * np.pi * frequency * time) #sine wave sin(2 * π * frequency * time)
+
+# random noise to make it realistic
 random_noise = noise_level * np.random.randn(len(time))
 voltage = sine_wave + random_noise
 
-# Save to CSV file
-# Stack time and voltage side-by-side into columns
-data = np.column_stack([time, voltage])
-np.savetxt("sample_data.csv", 
-           data, 
-           delimiter=",", 
-           header="time,voltage", 
-           comments="")
+# save it to a CSV file
 
-print("✓ Created sample_data.csv")
+data = np.column_stack([time, voltage]) #makes time and voltage side-by-side into columns
+np.savetxt("sample_data.csv", data, delimiter=",", header="time,voltage", comments="")
+
+
 print(f"  - {len(time)} data points")
 print(f"  - {duration} seconds of data")
 print(f"  - {frequency} Hz sine wave")
+
